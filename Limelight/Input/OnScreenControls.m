@@ -165,7 +165,7 @@ static float L3_Y;
 }
 
 - (void) setLevel:(OnScreenControlsLevel)level {
-    _level = level;
+    _level = OnScreenControlsLevelOff; // TODO: Do this properly
     [self updateControls];
 }
 

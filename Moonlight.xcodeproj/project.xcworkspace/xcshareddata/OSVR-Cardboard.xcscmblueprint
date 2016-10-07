@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A4B0849259F9566B0CBA84A6D3D4A0F895C03123",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "584110FE5ABD5BCB5065B76A98D3F8000D0644EC" : 9223372036854775807,
+    "A4B0849259F9566B0CBA84A6D3D4A0F895C03123" : 0,
+    "EB99D631D5149240E91F8D168F0F298D7A5BAA89" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A1D5AB1D-A776-4698-ADC6-48858F2C7035",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "584110FE5ABD5BCB5065B76A98D3F8000D0644EC" : "OSVR-Cardboard-iOS\/moonlight-common\/moonlight-common-c\/enet\/",
+    "A4B0849259F9566B0CBA84A6D3D4A0F895C03123" : "OSVR-Cardboard-iOS\/",
+    "EB99D631D5149240E91F8D168F0F298D7A5BAA89" : "OSVR-Cardboard-iOS\/moonlight-common\/moonlight-common-c\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OSVR-Cardboard",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OSVR-Cardboard.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cgutman\/enet.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "584110FE5ABD5BCB5065B76A98D3F8000D0644EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/simlrh\/OSVR-Cardboard-iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A4B0849259F9566B0CBA84A6D3D4A0F895C03123"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/moonlight-stream\/moonlight-common-c.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB99D631D5149240E91F8D168F0F298D7A5BAA89"
+    }
+  ]
+}

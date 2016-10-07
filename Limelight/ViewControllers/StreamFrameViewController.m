@@ -11,6 +11,7 @@
 #import "VideoDecoderRenderer.h"
 #import "StreamManager.h"
 #import "ControllerSupport.h"
+#import "OSVRManager.h"
 
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -19,6 +20,8 @@
 @implementation StreamFrameViewController {
     ControllerSupport *_controllerSupport;
     StreamManager *_streamMan;
+    OSVRManager *_osvrMan;
+    NSOperationQueue *_opQueue;
 }
 
 - (void)viewDidLoad
@@ -38,8 +41,11 @@
     _streamMan = [[StreamManager alloc] initWithConfig:self.streamConfig
                                             renderView:self.view
                                    connectionCallbacks:self];
-    NSOperationQueue* opQueue = [[NSOperationQueue alloc] init];
-    [opQueue addOperation:_streamMan];
+    _opQueue = [[NSOperationQueue alloc] init];
+    [_opQueue addOperation:_streamMan];
+    
+    _osvrMan = [[OSVRManager alloc] initWithConfig:self.streamConfig connectionCallbacks:self];
+    [_opQueue addOperation:_osvrMan];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillResignActive:)
@@ -54,12 +60,14 @@
 
 - (void)applicationWillResignActive:(NSNotification *)notification {
     [_streamMan stopStream];
+    [_osvrMan stopStream];
     [self returnToMainFrame];
 }
 
 - (void)edgeSwiped {
     Log(LOG_D, @"User swiped to end stream");
     [_streamMan stopStream];
+    [_osvrMan stopStream];
     [self returnToMainFrame];
 }
 
@@ -76,15 +84,21 @@
 - (void)connectionTerminated:(long)errorCode {
     Log(LOG_I, @"Connection terminated: %ld", errorCode);
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertController* conTermAlert = [UIAlertController alertControllerWithTitle:@"Connection Terminated" message:@"The connection was terminated" preferredStyle:UIAlertControllerStyleAlert];
-        [conTermAlert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action){
-            [self returnToMainFrame];
-        }]];
-        [self presentViewController:conTermAlert animated:YES completion:nil];
-    });
-
     [_streamMan stopStream];
+    [_osvrMan stopStream];
+    
+    if (errorCode) {
+        NSLog(@"%@", @"Restarting stream");
+        _streamMan = [[StreamManager alloc] initWithConfig:self.streamConfig
+                                                renderView:self.view
+                                       connectionCallbacks:self];
+        _osvrMan = [[OSVRManager alloc] initWithConfig:self.streamConfig connectionCallbacks:self];
+        
+        [_opQueue addOperation:_streamMan];
+        [_opQueue addOperation:_osvrMan];
+    } else {
+        [self returnToMainFrame];
+    }
 }
 
 - (void) stageStarting:(const char*)stageName {
@@ -103,33 +117,17 @@
 
 - (void) stageFailed:(const char*)stageName withError:(long)errorCode {
     Log(LOG_I, @"Stage %s failed: %ld", stageName, errorCode);
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Connection Failed"
-                                                                       message:[NSString stringWithFormat:@"%s failed with error %ld",
-                                                                                stageName, errorCode]
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action){
-            [self returnToMainFrame];
-        }]];
-        [self presentViewController:alert animated:YES completion:nil];
-    });
     
     [_streamMan stopStream];
+    [_osvrMan stopStream];
+    
+    [self returnToMainFrame];
 }
 
 - (void) launchFailed:(NSString*)message {
     Log(LOG_I, @"Launch failed: %@", message);
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Connection Failed"
-                                                                       message:message
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDestructive handler:^(UIAlertAction* action){
-            [self returnToMainFrame];
-        }]];
-        [self presentViewController:alert animated:YES completion:nil];
-    });
+    [self returnToMainFrame];
 }
 
 - (void) displayMessage:(const char*)message {
@@ -147,6 +145,7 @@
 }
 
 - (BOOL)shouldAutorotate {
-    return YES;
+    return NO;
 }
+
 @end

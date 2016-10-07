@@ -18,6 +18,11 @@
 		9E5D60131A5A5A3900689918 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D60001A5A5A3900689918 /* Roboto-Medium.ttf */; };
 		9E5D60151A5A5A3900689918 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D60021A5A5A3900689918 /* Roboto-Regular.ttf */; };
 		9E5D60161A5A5A3900689918 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D60031A5A5A3900689918 /* Roboto-Thin.ttf */; };
+		AA1B200D1DA4FD9D00B01850 /* SDiOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1B200C1DA4FD9D00B01850 /* SDiOSVersion.m */; };
+		AA89298B1DA025A100894CCF /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA89298A1DA025A100894CCF /* QRCodeViewController.m */; };
+		AAA625B51D9D6A2C00DF4A90 /* OSVR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA625B41D9D6A2C00DF4A90 /* OSVR.storyboard */; };
+		AAA625B91D9D72C900DF4A90 /* OSVRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA625B81D9D72C900DF4A90 /* OSVRManager.m */; };
+		AAA625BB1D9D7FB100DF4A90 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA625BA1D9D7FB100DF4A90 /* CoreMotion.framework */; };
 		D46A73AD1CBC7D090039F1EE /* ControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A73AC1CBC7D090039F1EE /* ControllerUnitTests.swift */; };
 		D4746EEC1CBC740C006FB401 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4746EEB1CBC740C006FB401 /* Controller.swift */; };
 		FB1D59971BBCCB6400F482CA /* ComputerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1D59961BBCCB6400F482CA /* ComputerScrollView.m */; };
@@ -119,6 +124,15 @@
 		9E5D60001A5A5A3900689918 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		9E5D60021A5A5A3900689918 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		9E5D60031A5A5A3900689918 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		AA1B200B1DA4FD9D00B01850 /* SDiOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDiOSVersion.h; sourceTree = "<group>"; };
+		AA1B200C1DA4FD9D00B01850 /* SDiOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDiOSVersion.m; sourceTree = "<group>"; };
+		AA1B200E1DA4FDD900B01850 /* iOSDeviceSizes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSDeviceSizes.h; sourceTree = "<group>"; };
+		AA8929891DA025A100894CCF /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		AA89298A1DA025A100894CCF /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		AAA625B41D9D6A2C00DF4A90 /* OSVR.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OSVR.storyboard; sourceTree = "<group>"; };
+		AAA625B71D9D725200DF4A90 /* OSVRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSVRManager.h; sourceTree = "<group>"; };
+		AAA625B81D9D72C900DF4A90 /* OSVRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSVRManager.m; sourceTree = "<group>"; };
+		AAA625BA1D9D7FB100DF4A90 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D46A73A01CBC7CB60039F1EE /* MoonlightUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonlightUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A73A41CBC7CB60039F1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46A73AB1CBC7D080039F1EE /* MoonlightUnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoonlightUnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -326,6 +340,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA625BB1D9D7FB100DF4A90 /* CoreMotion.framework in Frameworks */,
 				98CFB82F1CAD481B0048EF74 /* libmoonlight-common.a in Frameworks */,
 				FB8946ED19F6AFE800339C8A /* libopus.a in Frameworks */,
 				FB8946EB19F6AFE100339C8A /* libcrypto.a in Frameworks */,
@@ -375,6 +390,18 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
+		AAA625B61D9D721800DF4A90 /* OSVR */ = {
+			isa = PBXGroup;
+			children = (
+				AA1B200B1DA4FD9D00B01850 /* SDiOSVersion.h */,
+				AA1B200C1DA4FD9D00B01850 /* SDiOSVersion.m */,
+				AAA625B71D9D725200DF4A90 /* OSVRManager.h */,
+				AAA625B81D9D72C900DF4A90 /* OSVRManager.m */,
+				AA1B200E1DA4FDD900B01850 /* iOSDeviceSizes.h */,
+			);
+			name = OSVR;
+			sourceTree = "<group>";
+		};
 		D46A73A11CBC7CB60039F1EE /* MoonlightUnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +443,7 @@
 		FB290CF019B2C406004C83CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAA625BA1D9D7FB100DF4A90 /* CoreMotion.framework */,
 				FB6DDEF31AE739100096499A /* libmoonlight-common.a */,
 				FB4679001A57048000377732 /* CoreFoundation.framework */,
 				FBD349571A003F05002D2A60 /* libsqlite3.dylib */,
@@ -453,6 +481,7 @@
 				FBDE86E519F82297001C18A8 /* UIAppView.m */,
 				FB290E7819B37D81004C83CF /* iPad.storyboard */,
 				FB290E7A19B38036004C83CF /* iPhone.storyboard */,
+				AAA625B41D9D6A2C00DF4A90 /* OSVR.storyboard */,
 				FB89463719F6473800339C8A /* Launch Screen.xib */,
 				FB290D0819B2C406004C83CF /* Images.xcassets */,
 				FB290D0519B2C406004C83CF /* Limelight.xcdatamodeld */,
@@ -506,6 +535,7 @@
 		FB89460E19F646E200339C8A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AAA625B61D9D721800DF4A90 /* OSVR */,
 				FB9AFD2F1A7C979700872C98 /* Http */,
 				FB9AFD341A7D877B00872C98 /* Discovery */,
 				FB9AFD331A7D876F00872C98 /* AppList */,
@@ -556,6 +586,8 @@
 				FBD3494F19FF2174002D2A60 /* SettingsViewController.m */,
 				FB4A23B61A9D3637004D2EF2 /* LoadingFrameViewController.h */,
 				FB4A23B71A9D3637004D2EF2 /* LoadingFrameViewController.m */,
+				AA8929891DA025A100894CCF /* QRCodeViewController.h */,
+				AA89298A1DA025A100894CCF /* QRCodeViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -842,7 +874,7 @@
 						TestTargetID = FB290CED19B2C406004C83CF;
 					};
 					FB290CED19B2C406004C83CF = {
-						DevelopmentTeam = DM46QST4M7;
+						DevelopmentTeam = T2RQU54DLP;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -901,6 +933,7 @@
 				FB290CFE19B2C406004C83CF /* InfoPlist.strings in Resources */,
 				FB290E7B19B38036004C83CF /* iPhone.storyboard in Resources */,
 				9E5D600C1A5A5A3900689918 /* Roboto-Black.ttf in Resources */,
+				AAA625B51D9D6A2C00DF4A90 /* OSVR.storyboard in Resources */,
 				9E5D600E1A5A5A3900689918 /* Roboto-Bold.ttf in Resources */,
 				FB290D0919B2C406004C83CF /* Images.xcassets in Resources */,
 				FB89463819F6473800339C8A /* Launch Screen.xib in Resources */,
@@ -924,6 +957,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB290D0719B2C406004C83CF /* Limelight.xcdatamodeld in Sources */,
+				AA1B200D1DA4FD9D00B01850 /* SDiOSVersion.m in Sources */,
 				FB89463219F646E200339C8A /* VideoDecoderRenderer.m in Sources */,
 				FBD3495E1A004412002D2A60 /* Settings.m in Sources */,
 				FB290D0419B2C406004C83CF /* AppDelegate.m in Sources */,
@@ -954,8 +988,10 @@
 				9832D1361BBCD5C50036EF48 /* TemporaryApp.m in Sources */,
 				98D585701C0ED0E800F6CC00 /* TemporarySettings.m in Sources */,
 				FB89462819F646E200339C8A /* CryptoManager.m in Sources */,
+				AAA625B91D9D72C900DF4A90 /* OSVRManager.m in Sources */,
 				FB89462E19F646E200339C8A /* PairManager.m in Sources */,
 				FB9AFD371A7E02DB00872C98 /* HttpRequest.m in Sources */,
+				AA89298B1DA025A100894CCF /* QRCodeViewController.m in Sources */,
 				FB4678ED1A50C40900377732 /* OnScreenControls.m in Sources */,
 				FB290D0019B2C406004C83CF /* main.m in Sources */,
 				FBD3494319FC9C04002D2A60 /* AppAssetManager.m in Sources */,
@@ -1135,6 +1171,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T2RQU54DLP;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Limelight/Limelight-Prefix.pch";
@@ -1152,13 +1189,14 @@
 					"$(PROJECT_DIR)/libs/opus/lib",
 					"$(PROJECT_DIR)/libs/openssl/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.moonlight-stream.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "je.nourish.OSVR-Cardboard-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Limelight/Input/Moonlight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1170,6 +1208,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T2RQU54DLP;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Limelight/Limelight-Prefix.pch";
@@ -1187,13 +1226,14 @@
 					"$(PROJECT_DIR)/libs/opus/lib",
 					"$(PROJECT_DIR)/libs/openssl/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.moonlight-stream.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "je.nourish.OSVR-Cardboard-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Limelight/Input/Moonlight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

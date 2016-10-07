@@ -76,6 +76,7 @@ static NSMutableSet* hostList;
 
 - (void)alreadyPaired {
     BOOL usingCachedAppList = false;
+    BOOL streamLaunched = false;
     
     // Capture the host here because it can change once we
     // leave the main thread
@@ -83,6 +84,8 @@ static NSMutableSet* hostList;
     
     if ([host.appList count] > 0) {
         usingCachedAppList = true;
+        
+        /*
         dispatch_async(dispatch_get_main_queue(), ^{
             if (host != _selectedHost) {
                 return;
@@ -94,6 +97,9 @@ static NSMutableSet* hostList;
             [self updateAppsForHost:host];
             [self hideLoadingFrame];
         });
+         */
+        streamLaunched = [self launchStreamForHost:host];
+        [self hideLoadingFrame];
     }
     Log(LOG_I, @"Using cached app list: %d", usingCachedAppList);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -141,7 +147,13 @@ static NSMutableSet* hostList;
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self updateApplist:[appListResp getAppList] forHost:host];
-
+                
+                if (!streamLaunched) {
+                    [self launchStreamForHost:host];
+                    [self hideLoadingFrame];
+                    return;
+                }
+                
                 if (host != _selectedHost) {
                     return;
                 }
@@ -397,7 +409,7 @@ static NSMutableSet* hostList;
     }
     
     TemporaryApp* currentApp = [self findRunningApp:app.host];
-    if (currentApp != nil) {
+    if (false && currentApp != nil) { // Always resume
         UIAlertController* alertController = [UIAlertController
                                               alertControllerWithTitle: app.name
                                               message: [app.id isEqualToString:currentApp.id] ? @"" : [NSString stringWithFormat:@"%@ is currently running", currentApp.name]preferredStyle:UIAlertControllerStyleAlert];
@@ -584,7 +596,7 @@ static NSMutableSet* hostList;
 {
     // This will refresh the applist
     if (_selectedHost != nil) {
-        [self hostClicked:_selectedHost view:nil];
+        //[self hostClicked:_selectedHost view:nil];
     }
 }
 
@@ -704,11 +716,23 @@ static NSMutableSet* hostList;
     }
 }
 
+- (BOOL) launchStreamForHost:(TemporaryHost*)host {
+    for (TemporaryApp* app in host.appList) {
+        if ([app.name isEqualToString:@"mstsc.exe"]) {
+            [self appClicked:app];
+            return true;
+        }
+    }
+    return false;
+}
+
 - (void) updateAppsForHost:(TemporaryHost*)host {
     if (host != _selectedHost) {
         Log(LOG_W, @"Mismatched host during app update");
         return;
     }
+    
+    return;
     
     _sortedAppList = [host.appList allObjects];
     _sortedAppList = [_sortedAppList sortedArrayUsingSelector:@selector(compareName:)];
