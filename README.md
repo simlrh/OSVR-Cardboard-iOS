@@ -1,14 +1,11 @@
-#Moonlight iOS
+#OSVR-Cardboard-iOS
 
-#### Now available on the [App Store](https://itunes.apple.com/us/app/moonlight-game-streaming/id1000551566?mt=8) 
+An iOS app for playing OSVR-compatible PC games using a Google Cardboard viewer. Forked from [Moonlight](https://github.com/moonlight-stream/moonlight-ios).
 
-[Moonlight](http://moonlight-stream.com) is an open source implementation of NVIDIA's GameStream, as used by the NVIDIA Shield, but built for iOS. Moonlight iOS allows you to stream your full collection of Steam games from
-your powerful desktop computer to your iOS Device.
+##Usage
 
-There are also versions for [Android](https://github.com/moonlight-stream/moonlight-android) and [PC](https://github.com/moonlight-stream/moonlight-pc). 
+Set up NVidia SHIELD Remote Desktop according to [the instructions from NVidia](http://nvidia.custhelp.com/app/answers/detail/a_id/3489/~/shield-remote-desktop). Install and configure the [OSVR-Cardboard plugin](https://github.com/simlrh/OSVR-Cardboard).
 
-##### Apple TV Note: 
-We currently cannot port Moonlight to Apple TV due to a limitation in the tvOS SDK that prevents Moonlight from using the APIs that would be necessary for it to work. Thank you for your interest - you can track this issue [here](https://github.com/moonlight-stream/moonlight-ios/issues/184). 
+Run the app and swipe right to get to the settings page. Tap "Scan QR Code" and scan the code on your Cardboard viewer. Then tap Add Host to pair with your PC. Tap the host to connect and place your phone in the viewer. You can swipe right to disconnect.
 
-##### Questions?
-Check out our [wiki](https://github.com/moonlight-stream/moonlight-docs/wiki).
+The connection may drop when you switch away from a fullscreen game on your PC - this seems to be the way NVidia GameStream works. Just tap the host again to reconnect.
