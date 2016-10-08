@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/steve/Documents/OSVR-Cardboard-iOS/Moonlight.xcodeproj">
+      location = "self:/Users/steve/Documents/OSVR-Cardboard-iOS/OSVR-Cardboard.xcodeproj">
    </FileRef>
 </Workspace>

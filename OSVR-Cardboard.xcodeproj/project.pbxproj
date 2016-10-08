@@ -133,17 +133,17 @@
 		AAA625B71D9D725200DF4A90 /* OSVRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSVRManager.h; sourceTree = "<group>"; };
 		AAA625B81D9D72C900DF4A90 /* OSVRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSVRManager.m; sourceTree = "<group>"; };
 		AAA625BA1D9D7FB100DF4A90 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		D46A73A01CBC7CB60039F1EE /* MoonlightUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonlightUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46A73A01CBC7CB60039F1EE /* OSVR-CardboardUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSVR-CardboardUnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A73A41CBC7CB60039F1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46A73AB1CBC7D080039F1EE /* MoonlightUnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoonlightUnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D46A73AC1CBC7D090039F1EE /* ControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllerUnitTests.swift; path = Input/ControllerUnitTests.swift; sourceTree = "<group>"; };
-		D4746EEA1CBC740C006FB401 /* Moonlight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Moonlight-Bridging-Header.h"; path = "Input/Moonlight-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4746EEA1CBC740C006FB401 /* OSVR-Cardboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OSVR-Cardboard-Bridging-Header.h"; path = "Input/OSVR-Cardboard-Bridging-Header.h"; sourceTree = "<group>"; };
 		D4746EEB1CBC740C006FB401 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		FB1D59951BBCCB6400F482CA /* ComputerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputerScrollView.h; sourceTree = "<group>"; };
 		FB1D59961BBCCB6400F482CA /* ComputerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputerScrollView.m; sourceTree = "<group>"; };
 		FB1D59981BBCCD7E00F482CA /* AppCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCollectionView.h; sourceTree = "<group>"; };
 		FB1D59991BBCCD7E00F482CA /* AppCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCollectionView.m; sourceTree = "<group>"; };
-		FB290CEE19B2C406004C83CF /* Moonlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB290CEE19B2C406004C83CF /* Cardboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB290CF119B2C406004C83CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB290CF319B2C406004C83CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FB290CF519B2C406004C83CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -424,7 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				98AB2E7F1CAD46830089BB98 /* moonlight-common.xcodeproj */,
-				FB290CF919B2C406004C83CF /* Moonlight */,
+				FB290CF919B2C406004C83CF /* OSVR-Cardboard */,
 				D46A73A11CBC7CB60039F1EE /* MoonlightUnitTests */,
 				FB290CF019B2C406004C83CF /* Frameworks */,
 				FB290CEF19B2C406004C83CF /* Products */,
@@ -434,8 +434,8 @@
 		FB290CEF19B2C406004C83CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB290CEE19B2C406004C83CF /* Moonlight.app */,
-				D46A73A01CBC7CB60039F1EE /* MoonlightUnitTests.xctest */,
+				FB290CEE19B2C406004C83CF /* Cardboard.app */,
+				D46A73A01CBC7CB60039F1EE /* OSVR-CardboardUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -460,10 +460,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FB290CF919B2C406004C83CF /* Moonlight */ = {
+		FB290CF919B2C406004C83CF /* OSVR-Cardboard */ = {
 			isa = PBXGroup;
 			children = (
-				D4746EEA1CBC740C006FB401 /* Moonlight-Bridging-Header.h */,
+				D4746EEA1CBC740C006FB401 /* OSVR-Cardboard-Bridging-Header.h */,
 				9E5D5FF61A5A5A3900689918 /* Font */,
 				FB89460419F646E200339C8A /* Crypto */,
 				FB89460919F646E200339C8A /* Input */,
@@ -490,7 +490,7 @@
 				FB1D59981BBCCD7E00F482CA /* AppCollectionView.h */,
 				FB1D59991BBCCD7E00F482CA /* AppCollectionView.m */,
 			);
-			name = Moonlight;
+			name = "OSVR-Cardboard";
 			path = Limelight;
 			sourceTree = "<group>";
 		};
@@ -822,9 +822,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D46A739F1CBC7CB60039F1EE /* MoonlightUnitTests */ = {
+		D46A739F1CBC7CB60039F1EE /* OSVR-CardboardUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D46A73A91CBC7CB60039F1EE /* Build configuration list for PBXNativeTarget "MoonlightUnitTests" */;
+			buildConfigurationList = D46A73A91CBC7CB60039F1EE /* Build configuration list for PBXNativeTarget "OSVR-CardboardUnitTests" */;
 			buildPhases = (
 				D46A739C1CBC7CB60039F1EE /* Sources */,
 				D46A739D1CBC7CB60039F1EE /* Frameworks */,
@@ -835,14 +835,14 @@
 			dependencies = (
 				D46A73A61CBC7CB60039F1EE /* PBXTargetDependency */,
 			);
-			name = MoonlightUnitTests;
+			name = "OSVR-CardboardUnitTests";
 			productName = MoonlightUnitTests;
-			productReference = D46A73A01CBC7CB60039F1EE /* MoonlightUnitTests.xctest */;
+			productReference = D46A73A01CBC7CB60039F1EE /* OSVR-CardboardUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FB290CED19B2C406004C83CF /* Moonlight */ = {
+		FB290CED19B2C406004C83CF /* Cardboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB290D2019B2C406004C83CF /* Build configuration list for PBXNativeTarget "Moonlight" */;
+			buildConfigurationList = FB290D2019B2C406004C83CF /* Build configuration list for PBXNativeTarget "Cardboard" */;
 			buildPhases = (
 				FB290CEA19B2C406004C83CF /* Sources */,
 				FB290CEB19B2C406004C83CF /* Frameworks */,
@@ -853,9 +853,9 @@
 			dependencies = (
 				98AB2E861CAD468B0089BB98 /* PBXTargetDependency */,
 			);
-			name = Moonlight;
+			name = Cardboard;
 			productName = Limelight;
-			productReference = FB290CEE19B2C406004C83CF /* Moonlight.app */;
+			productReference = FB290CEE19B2C406004C83CF /* Cardboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -879,7 +879,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB290CE919B2C406004C83CF /* Build configuration list for PBXProject "Moonlight" */;
+			buildConfigurationList = FB290CE919B2C406004C83CF /* Build configuration list for PBXProject "OSVR-Cardboard" */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -897,8 +897,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				FB290CED19B2C406004C83CF /* Moonlight */,
-				D46A739F1CBC7CB60039F1EE /* MoonlightUnitTests */,
+				FB290CED19B2C406004C83CF /* Cardboard */,
+				D46A739F1CBC7CB60039F1EE /* OSVR-CardboardUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1017,7 +1017,7 @@
 		};
 		D46A73A61CBC7CB60039F1EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB290CED19B2C406004C83CF /* Moonlight */;
+			target = FB290CED19B2C406004C83CF /* Cardboard */;
 			targetProxy = D46A73A51CBC7CB60039F1EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1053,7 +1053,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "MoonlightUnitTests/MoonlightUnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moonlight.app/Moonlight";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSVR-Cardboard.app/OSVR-Cardboard";
 			};
 			name = Debug;
 		};
@@ -1078,7 +1078,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "MoonlightUnitTests/MoonlightUnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moonlight.app/Moonlight";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSVR-Cardboard.app/OSVR-Cardboard";
 			};
 			name = Release;
 		};
@@ -1104,6 +1104,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1124,6 +1125,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[sdk=iphoneos*]" = "OSVR-Cardboard-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1150,6 +1152,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1163,6 +1166,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[sdk=iphoneos*]" = "OSVR-Cardboard-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1197,7 +1201,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Limelight/Input/Moonlight-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Limelight/Input/OSVR-Cardboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1234,7 +1238,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Limelight/Input/Moonlight-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Limelight/Input/OSVR-Cardboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1245,7 +1249,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D46A73A91CBC7CB60039F1EE /* Build configuration list for PBXNativeTarget "MoonlightUnitTests" */ = {
+		D46A73A91CBC7CB60039F1EE /* Build configuration list for PBXNativeTarget "OSVR-CardboardUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D46A73A71CBC7CB60039F1EE /* Debug */,
@@ -1254,7 +1258,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB290CE919B2C406004C83CF /* Build configuration list for PBXProject "Moonlight" */ = {
+		FB290CE919B2C406004C83CF /* Build configuration list for PBXProject "OSVR-Cardboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB290D1E19B2C406004C83CF /* Debug */,
@@ -1263,7 +1267,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB290D2019B2C406004C83CF /* Build configuration list for PBXNativeTarget "Moonlight" */ = {
+		FB290D2019B2C406004C83CF /* Build configuration list for PBXNativeTarget "Cardboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB290D2119B2C406004C83CF /* Debug */,

@@ -11,7 +11,7 @@
 #include "Limelight.h"
 
 // Swift
-#import "Moonlight-Swift.h"
+#import "Cardboard-Swift.h"
 @class Controller;
 
 @import GameController;

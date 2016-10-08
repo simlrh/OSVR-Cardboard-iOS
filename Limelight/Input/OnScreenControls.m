@@ -11,7 +11,7 @@
 //#import "Controller.h"
 #include "Limelight.h"
 
-#import "Moonlight-Swift.h"
+#import "Cardboard-Swift.h"
 @class Controller;
 
 #define UPDATE_BUTTON(x, y) (buttonFlags = \

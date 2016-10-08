@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 // Swift
-#import "Moonlight-Swift.h"
 @class Controller;
 
 @class OnScreenControls;
