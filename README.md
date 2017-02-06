@@ -1,4 +1,4 @@
-#OSVR-Cardboard-iOS
+#OSVR-Cardboard-iOS [![Donate](https://nourish.je/assets/images/donate.svg)](http://ko-fi.com/A250KJT)
 
 An iOS app for playing OSVR-compatible PC games using a Google Cardboard viewer. Forked from [Moonlight](https://github.com/moonlight-stream/moonlight-ios).
 
